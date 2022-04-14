@@ -1,16 +1,12 @@
 <template>
-
   <div class="main" :style="mainStyle">
     <h1>RANT</h1>
-    
     <input
       v-model="email"
       type="text"
       name="email"
       id="email"
       placeholder="Email"
-      :style="input"
-      
     />
     <br />
     <input
@@ -19,17 +15,14 @@
       name="fullName"
       id="fullName"
       placeholder="FullName"
-      :style="input"
     />
     <br />
-    
     <input
       v-model="number"
       type="text"
       name="phone"
       id="phone"
       placeholder="Phonenumber"
-      :style="input"
     />
     <br />
 
@@ -39,18 +32,17 @@
       name="password"
       id="password"
       placeholder="Password"
-      :style="input"
     />
     <br />
     <button
       type="button"
-      value="Register"
-      class="button"
+      class="button2"
       id="register"
       :style="inputStyle"
       @click.prevent="register"
-    />
-
+    >
+      Register
+    </button>
      <br />
     <input
       type="button"
@@ -60,16 +52,13 @@
       :style="inputStyle"
     />
 
-    <input
-      type="button"
-      value="Login"
-      class="button2"
-      id="login"
-      :style="inputStyle"
-    />
-    
+    <nuxt-link
+        to="/"
+        class="button2"
+    >
+      <span>Sign in</span>
+    </nuxt-link>
   </div>
-  
 </template>
 
 <script>
@@ -83,35 +72,38 @@ export default {
     number: ''
     }
   },
+  //Custom style for main and input for make the page responsive:
+  props: {
+    mainStyle: String,
+    inputStyle: String
+  },
   methods: {
      async register() {
         await fetch('https://sf-rant-backend.herokuapp.com/authorize', {
           method: 'POST',
-          headers: {'Content-Type': 'application/json', 
-          'Accept': 'application/json',
-          'Authorization': 'Bearer ' + jwt},
+          headers:
+              {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+                /*,
+                'Authorization': 'Bearer ' + jwt*/
+              },
           body: JSON.stringify({
             fullName: this.name,
             email: this.email,
-            password: this.password,
-            phone: this.password
+            phone: this.number,
+            password: this.password
           })
-        }).then(response=>response.json()).then(responseData=>console.log(responseData.jwt));
+        }).then(response=>response.json()).then((responseData) => {
+          console.log(responseData.jwt)
+          localStorage.setItem('jwt', responseData.jwt)
+        })
+     }
 
         //await this.$router.push('C:\Users\w2\Documents\Rakhat\VS code\sf-frontend-1\pages/index.vue');
-        
+
     }
-  },
-
-
-
-
-  //Custom style for main and input for make the page responsive:
-  props: {
-    mainStyle: String,
-    inputStyle: String,
-  },
-};
+  }
 </script>
 
 <style>
@@ -143,7 +135,7 @@ input {
   border: none;
   padding: 10px;
   text-align: center;
-  outline: none;  
+  outline: none;
   margin: 5px;
   width: 30%;
   box-sizing: border-box;
@@ -160,7 +152,7 @@ input:active {
   box-shadow: grey;
 }
 button {
-  
+
   cursor: pointer;
   user-select: none;
 }

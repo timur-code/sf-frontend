@@ -1,8 +1,8 @@
 <template>
-    
+
   <div class="main" :style="mainStyle">
     <h1>RANT</h1>
-    
+
     <i class="fa fa-envelope-o fa-fw"></i>
     <fa icon="coffee"/>
 
@@ -10,22 +10,21 @@
      <span class="input-group-addon">
        <i class="fa fa-envelope-o fa-fw"></i>
        </span>
-     <input class="form-control" type="text" placeholder="Email">
+     <input class="form-control" type="text" v-model="userName" placeholder="Email">
 </div>
     <div class="input">
      <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-     <input class="form-control" type="password" placeholder="Password">
+     <input class="form-control" type="password" v-model="password" placeholder="Password">
 </div>
 
-  
-   
-    <input
-      type="button"
-      value="Sign In"
+    <button
       class="button"
       id="signin"
+      @click.prevent="login"
       :style="inputStyle"
-    />
+    >
+      Sign in
+    </button>
 
      <br />
     <input
@@ -36,25 +35,59 @@
       :style="inputStyle"
     />
 
-    <input
-      type="button"
-      value="sign up"
-      class="button2"
-      id="signup"
-      :style="inputStyle"
-    />
-    
+    <nuxt-link
+        to="/register"
+        class="button2"
+        id="signup"
+        :style="inputStyle"
+    >
+      <span class="button2">Sign up</span>
+    </nuxt-link>
+
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
+  data() {
+    return {
+      userName: '',
+      password: ''
+    }
+  },
   name: "Login",
   //Custom style for main and input for make the page responsive:
   props: {
     mainStyle: String,
     inputStyle: String,
   },
+  created() {
+    // axios.defaults.headers.common['Content-Type'] = 'application/json';
+    // axios.defaults.headers.common['Accept'] = 'application/json';
+  },
+  methods: {
+    async login (){
+      await fetch('https://sf-rant-backend.herokuapp.com/authenticate', {
+        method: 'POST',
+        headers:
+            {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+              /*,
+              'Authorization': 'Bearer ' + jwt*/
+            },
+        body: JSON.stringify({
+          username: this.userName,
+          password: this.password
+        })
+      }).then(response=> response.json()).then((responseData) => {
+        console.log(responseData.jwt)
+        localStorage.setItem('jwt', responseData.jwt)
+      })
+    }
+  }
 };
 </script>
 
