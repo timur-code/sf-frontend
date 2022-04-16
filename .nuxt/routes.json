@@ -1,16 +1,20 @@
 [
   {
+    "name": "cabinet",
+    "path": "/cabinet",
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\cabinet\\\\index.vue",
+    "chunkName": "pages/cabinet/index"
+  },
+  {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\register\\\\index.vue",
-    "chunkName": "pages/register/index",
-    "_name": "_3b3b9c84"
+    "chunkName": "pages/register/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_38946ac7"
+    "chunkName": "pages/index"
   }
 ]

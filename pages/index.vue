@@ -84,8 +84,10 @@ export default {
         })
       }).then(response=> response.json()).then((responseData) => {
         console.log(responseData.jwt)
-        localStorage.setItem('jwt', responseData.jwt)
+        localStorage.setItem('jwt', responseData.jwt);
+        
       })
+      await this.$router.push('/cabinet');
     }
   }
 };
