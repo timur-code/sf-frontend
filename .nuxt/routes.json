@@ -2,15 +2,15 @@
   {
     "name": "register",
     "path": "/register",
-    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\register\\\\index.vue",
+    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\register\\\\index.vue",
     "chunkName": "pages/register/index",
-    "_name": "_3b3b9c84"
+    "_name": "_7d46cf91"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_38946ac7"
+    "_name": "_fdf6cbd8"
   }
 ]
