@@ -97,10 +97,12 @@ export default {
         }).then(response=>response.json()).then((responseData) => {
           console.log(responseData.jwt)
           localStorage.setItem('jwt', responseData.jwt)
+          
         })
+        await this.$router.push('/');
      }
 
-        //await this.$router.push('C:\Users\w2\Documents\Rakhat\VS code\sf-frontend-1\pages/index.vue');
+        
 
     }
   }
