@@ -79,7 +79,7 @@ export default {
             
         })
         console.log(response.json());
-        await this.$router.push('/');
+        await this.$router.push('/cabinet');
         } else {
             alert('No enough money.')
         }
