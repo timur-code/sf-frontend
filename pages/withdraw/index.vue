@@ -93,15 +93,6 @@ export default {
   }
 </script>
 
-
-
-
-
-
-
-
-
-
 <style>
 /* Import Poppins font: */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
