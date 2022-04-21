@@ -1,7 +1,7 @@
 <template>
   <div class="main" :style="mainStyle">
     <h1>RANT</h1>
-    <h1>Withdraw</h1>
+    <h1>Deposit</h1>
 
     <p> Balance:{{bal}} </p>
 
@@ -15,11 +15,11 @@
     <button
       type="button"
       class="button2"
-      id="withdraw"
+      id="deposit"
       :style="inputStyle"
-      @click.prevent="withdraw"
+      @click.prevent="deposit"
     >
-      Withdraw
+      Deposit
     </button>
 
 
@@ -58,12 +58,12 @@ export default {
        
     
     methods: {
-    name: 'withdraw',
-     async withdraw() {
+    name: 'deposit',
+     async deposit() {
          const user = JSON.parse(localStorage.getItem('user'));
          const wall = JSON.parse(localStorage.getItem('wallet'));
          if(wall.balance >= this.money){
-        const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/withdraw`, {
+        const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/deposit`, {
           method: 'POST',
           
           headers:

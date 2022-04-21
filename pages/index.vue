@@ -17,16 +17,18 @@
      <input class="form-control" type="password" v-model="password" placeholder="Password">
 </div>
 
+
     <button
       class="button"
       id="signin"
       @click.prevent="login"
       :style="inputStyle"
-    >
-      Sign in
+    > Sign in
     </button>
 
+    
      <br />
+     <div id="app">
     <input
       type="button"
       value="forgot password"
@@ -37,12 +39,14 @@
 
     <nuxt-link
         to="/register"
-        class="button2"
+        class="button3"
         id="signup"
         :style="inputStyle"
     >
-      <span class="button2">Sign up</span>
+      Sign up
     </nuxt-link>
+
+    </div>
 
   </div>
 </template>
@@ -139,11 +143,31 @@ input:active {
   box-shadow: 0px 0px 8px -5px #000000;
 }
 #signin {
-  box-shadow: grey;
+  border-radius: 3rem;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  outline: none;
+  margin: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 .button {
   cursor: pointer;
   user-select: none;
+}
+
+.app{
+ cursor: pointer;
+  user-select: none;
+  background: white;
+}
+
+.nuxt-link {
+  color: black;
+  background: black;
 }
 
 .button2 {
@@ -151,6 +175,14 @@ input:active {
   user-select: none;
   background: white;
 }
+
+#signup{
+  cursor: pointer;
+  user-select: none;
+  background: white;
+}
+
+
 img {
   height: 2.2rem;
   margin: 10px;

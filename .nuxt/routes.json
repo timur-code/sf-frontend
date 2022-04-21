@@ -1,10 +1,31 @@
 [
   {
+    "name": "cabinet",
+    "path": "/cabinet",
+    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\cabinet\\\\index.vue",
+    "chunkName": "pages/cabinet/index",
+    "_name": "_bb0075b0"
+  },
+  {
+    "name": "deposit",
+    "path": "/deposit",
+    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\deposit\\\\index.vue",
+    "chunkName": "pages/deposit/index",
+    "_name": "_3e38c922"
+  },
+  {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\register\\\\index.vue",
     "chunkName": "pages/register/index",
     "_name": "_7d46cf91"
+  },
+  {
+    "name": "withdraw",
+    "path": "/withdraw",
+    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\withdraw\\\\index.vue",
+    "chunkName": "pages/withdraw/index",
+    "_name": "_2fc5fcca"
   },
   {
     "name": "index",

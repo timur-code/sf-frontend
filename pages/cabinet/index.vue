@@ -6,6 +6,19 @@
         {{phoneNumber}}
       </p>
 
+      <nuxt-link
+        to="/withdraw"
+        class="button2"
+    >
+      <span>Withdraw</span>
+    </nuxt-link>
+
+<nuxt-link
+        to="/deposit"
+        class="button2"
+    >
+      <span>Deposit</span>
+    </nuxt-link>
 
        <button
       class="button"
@@ -14,6 +27,7 @@
       :style="inputStyle"
     >
       Log out
+
       </button>
 </div>
 </template>
@@ -104,9 +118,19 @@ input:hover {
 input:active {
   box-shadow: 0px 0px 8px -5px #000000;
 }
-#signin {
-  box-shadow: grey;
+#logout {
+  border-radius: 3rem;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  outline: none;
+  margin: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
+
 button {
 
   cursor: pointer;
