@@ -2,36 +2,36 @@
   {
     "name": "cabinet",
     "path": "/cabinet",
-    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\cabinet\\\\index.vue",
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\cabinet\\\\index.vue",
     "chunkName": "pages/cabinet/index",
-    "_name": "_bb0075b0"
+    "_name": "_77140dd5"
   },
   {
     "name": "deposit",
     "path": "/deposit",
-    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\deposit\\\\index.vue",
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\deposit\\\\index.vue",
     "chunkName": "pages/deposit/index",
-    "_name": "_3e38c922"
+    "_name": "_12cd11cf"
   },
   {
     "name": "register",
     "path": "/register",
-    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\register\\\\index.vue",
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\register\\\\index.vue",
     "chunkName": "pages/register/index",
-    "_name": "_7d46cf91"
+    "_name": "_3b3b9c84"
   },
   {
     "name": "withdraw",
     "path": "/withdraw",
-    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\withdraw\\\\index.vue",
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\withdraw\\\\index.vue",
     "chunkName": "pages/withdraw/index",
-    "_name": "_2fc5fcca"
+    "_name": "_248a6c86"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_fdf6cbd8"
+    "_name": "_38946ac7"
   }
 ]

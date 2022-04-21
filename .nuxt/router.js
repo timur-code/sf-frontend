@@ -4,11 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _bb0075b0 = () => interopDefault(import('..\\pages\\cabinet\\index.vue' /* webpackChunkName: "pages/cabinet/index" */))
-const _3e38c922 = () => interopDefault(import('..\\pages\\deposit\\index.vue' /* webpackChunkName: "pages/deposit/index" */))
-const _7d46cf91 = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
-const _2fc5fcca = () => interopDefault(import('..\\pages\\withdraw\\index.vue' /* webpackChunkName: "pages/withdraw/index" */))
-const _fdf6cbd8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _77140dd5 = () => interopDefault(import('..\\pages\\cabinet\\index.vue' /* webpackChunkName: "pages/cabinet/index" */))
+const _12cd11cf = () => interopDefault(import('..\\pages\\deposit\\index.vue' /* webpackChunkName: "pages/deposit/index" */))
+const _3b3b9c84 = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
+const _248a6c86 = () => interopDefault(import('..\\pages\\withdraw\\index.vue' /* webpackChunkName: "pages/withdraw/index" */))
+const _38946ac7 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -23,23 +23,23 @@ export const routerOptions = {
 
   routes: [{
     path: "/cabinet",
-    component: _bb0075b0,
+    component: _77140dd5,
     name: "cabinet"
   }, {
     path: "/deposit",
-    component: _3e38c922,
+    component: _12cd11cf,
     name: "deposit"
   }, {
     path: "/register",
-    component: _7d46cf91,
+    component: _3b3b9c84,
     name: "register"
   }, {
     path: "/withdraw",
-    component: _2fc5fcca,
+    component: _248a6c86,
     name: "withdraw"
   }, {
     path: "/",
-    component: _fdf6cbd8,
+    component: _38946ac7,
     name: "index"
   }],
 
