@@ -35,14 +35,13 @@
     />
     <br />
     <button
-      type="button"
-      class="button2"
+      class="button"
       id="register"
       :style="inputStyle"
       @click.prevent="register"
-    >
-      Register
+    >Register
     </button>
+
      <br />
     <input
       type="button"
@@ -150,9 +149,19 @@ input:hover {
 input:active {
   box-shadow: 0px 0px 8px -5px #000000;
 }
-#signin {
-  box-shadow: grey;
+#register {
+  border-radius: 3rem;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  outline: none;
+  margin: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
+
 button {
 
   cursor: pointer;
