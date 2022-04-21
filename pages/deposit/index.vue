@@ -1,58 +1,106 @@
 <template>
   <div class="main" :style="mainStyle">
     <h1>RANT</h1>
-    
-    <input
-      v-model="number"
-      type="text"
-      name="number"
-      id="number"
-      placeholder="Number"
-    />
-    <br />
-    <input
-      v-model="number"
-      type="text"
-      name="phone"
-      id="phone"
-      placeholder="Phonenumber"
-    />
-    <br />
+    <h1>Deposit</h1>
 
+    <p> Balance:{{bal}} </p>
+
+    <input
+      v-model="money"
+      type="number"
+      name="email"
+      id="email"
+      placeholder="Type your sum"
+    />  
     <button
       type="button"
       class="button2"
-      id="Deposit"
+      id="deposit"
       :style="inputStyle"
-      @click.prevent="deposit">
-    </button>
-     
-
-    <nuxt-link
-        to="/"
-        class="button2"
+      @click.prevent="deposit"
     >
-      <span>Back</span>
-    </nuxt-link>
-  </div>
+      Deposit
+    </button>
+
+
+    </div>
 </template>
 
 <script>
 export default {
-  name: "deposit",
+    props: {
+    mainStyle: String,
+    inputStyle: String,
+  },
   data() {
     return {
-    number: ''
+    bal: '',
+    money: ''
     }
   },
-  //Custom style for main and input for make the page responsive:
-  props: {
-    mainStyle: String,
-    inputStyle: String
-  },
-  
+  async mounted(){
+        const user = JSON.parse(localStorage.getItem('user'));
+        const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/balance`, {
+       method: 'GET',
+        headers: {'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.getItem('jwt')
+        }
+      })
+      const con = await response.json();
+        console.log(con);
+        this.bal = JSON.parse(con.balance);
+        
+        localStorage.setItem('wallet', JSON.stringify(con));
+
+    },
+    
+       
+    
+    methods: {
+    name: 'deposit',
+     async deposit() {
+         
+         const wall = JSON.parse(localStorage.getItem('wallet'));
+         if(wall.balance >= this.money){
+        const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/deposit`, {
+          method: 'POST',
+          
+          headers:
+              {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('jwt')
+              },
+              
+            body: JSON.stringify({
+                balance: wall.balance - this.money
+            })
+            
+        })
+        console.log(response.json());
+        await this.$router.push('/');
+        } else {
+            alert('No enough money.')
+        }
+        
+        
+     }
+
+        
+
+    }
   }
 </script>
+
+
+
+
+
+
+
+
+
 
 <style>
 /* Import Poppins font: */
@@ -76,15 +124,18 @@ h1 {
   user-select: none;
 }
 
-
+.fa {
+  font-size: 28px;
+  color: #000000;
+}
 
 input {
-  border-radius: 3;
+  border-radius: 3rem;
   border: none;
   padding: 10px;
   text-align: center;
   outline: none;
-  margin: 5px;
+  margin: 10px;
   width: 30%;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -99,8 +150,7 @@ input:active {
 #signin {
   box-shadow: grey;
 }
-button {
-
+.button {
   cursor: pointer;
   user-select: none;
 }

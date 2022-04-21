@@ -40,7 +40,7 @@ export default {
   },
   async mounted(){
         const user = JSON.parse(localStorage.getItem('user'));
-        const response = await fetch(`https://sf-rant-backend.herokua pp.com/user/${user.id}/balance`, {
+        const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/balance`, {
        method: 'GET',
         headers: {'Content-Type': 'application/json',
         'Accept': 'application/json',
