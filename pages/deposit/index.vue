@@ -61,8 +61,8 @@ export default {
     name: 'deposit',
      async deposit() {
          const user = JSON.parse(localStorage.getItem('user'));
-         const wall = JSON.parse(localStorage.getItem('wallet'));
-         if(wall.balance >= this.money){
+    
+         
         const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/deposit`, {
           method: 'POST',
           
@@ -74,15 +74,12 @@ export default {
               },
               
             body: JSON.stringify({
-                balance: wall.balance - this.money
+                amount: this.money
             })
             
         })
         console.log(response.json());
-        await this.$router.push('/');
-        } else {
-            alert('No enough money.')
-        }
+        } 
         
         
      }
@@ -90,7 +87,7 @@ export default {
         
 
     }
-  }
+  
 </script>
 
 
