@@ -40,7 +40,6 @@ export default {
   },
   async mounted(){
        this.refreshbalance()
-
     },
     
      
@@ -85,19 +84,8 @@ export default {
         this.bal = JSON.parse(con.balance);
      }      
      }
-
         
-
     }
   
 </script>
-
-
-
-
-
-
-
-
-
 
