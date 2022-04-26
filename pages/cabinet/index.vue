@@ -1,5 +1,6 @@
 <template>
 <div class="main" :style="mainStyle">
+
     <h1>RANT</h1>
     <p> {{userName}} <br>
         {{emaill}}  <br>
@@ -30,6 +31,8 @@
 
       </button>
 </div>
+
+
 </template>
 
 
@@ -93,6 +96,8 @@ export default Vue.extend({
   padding-bottom: 5%;
   font-family: "Poppins", sans-serif;
 }
+
+
 h1 {
   cursor: default;
   user-select: none;

@@ -4,11 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _77140dd5 = () => interopDefault(import('..\\pages\\cabinet\\index.vue' /* webpackChunkName: "pages/cabinet/index" */))
-const _12cd11cf = () => interopDefault(import('..\\pages\\deposit\\index.vue' /* webpackChunkName: "pages/deposit/index" */))
-const _3b3b9c84 = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
-const _248a6c86 = () => interopDefault(import('..\\pages\\withdraw\\index.vue' /* webpackChunkName: "pages/withdraw/index" */))
-const _38946ac7 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _bb0075b0 = () => interopDefault(import('..\\pages\\cabinet\\index.vue' /* webpackChunkName: "pages/cabinet/index" */))
+const _3e38c922 = () => interopDefault(import('..\\pages\\deposit\\index.vue' /* webpackChunkName: "pages/deposit/index" */))
+const _16bec784 = () => interopDefault(import('..\\pages\\prcab\\index.vue' /* webpackChunkName: "pages/prcab/index" */))
+const _7d46cf91 = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
+const _2fc5fcca = () => interopDefault(import('..\\pages\\withdraw\\index.vue' /* webpackChunkName: "pages/withdraw/index" */))
+const _fdf6cbd8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -23,23 +24,27 @@ export const routerOptions = {
 
   routes: [{
     path: "/cabinet",
-    component: _77140dd5,
+    component: _bb0075b0,
     name: "cabinet"
   }, {
     path: "/deposit",
-    component: _12cd11cf,
+    component: _3e38c922,
     name: "deposit"
   }, {
+    path: "/prcab",
+    component: _16bec784,
+    name: "prcab"
+  }, {
     path: "/register",
-    component: _3b3b9c84,
+    component: _7d46cf91,
     name: "register"
   }, {
     path: "/withdraw",
-    component: _248a6c86,
+    component: _2fc5fcca,
     name: "withdraw"
   }, {
     path: "/",
-    component: _38946ac7,
+    component: _fdf6cbd8,
     name: "index"
   }],
 
