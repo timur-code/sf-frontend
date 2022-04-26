@@ -61,7 +61,12 @@ export default {
     name: 'deposit',
      async deposit() {
          const user = JSON.parse(localStorage.getItem('user'));
+<<<<<<< HEAD
         
+=======
+    
+         
+>>>>>>> bc0e5437f34c2641c2936d89163b9ce599f80163
         const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/deposit`, {
           method: 'POST',
           
@@ -73,12 +78,19 @@ export default {
               },
               
             body: JSON.stringify({
+<<<<<<< HEAD
                 balance: wall.balance + this.money
+=======
+                amount: this.money
+>>>>>>> bc0e5437f34c2641c2936d89163b9ce599f80163
             })
             
         })
         console.log(response.json());
+<<<<<<< HEAD
         await this.$router.push('/cabinet');
+=======
+>>>>>>> bc0e5437f34c2641c2936d89163b9ce599f80163
         } 
         
         

@@ -2,13 +2,19 @@
   {
     "name": "cabinet",
     "path": "/cabinet",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\cabinet\\\\index.vue",
     "chunkName": "pages/cabinet/index",
     "_name": "_bb0075b0"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\cabinet\\\\index.vue",
+    "chunkName": "pages/cabinet/index"
+>>>>>>> bc0e5437f34c2641c2936d89163b9ce599f80163
   },
   {
     "name": "deposit",
     "path": "/deposit",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\deposit\\\\index.vue",
     "chunkName": "pages/deposit/index",
     "_name": "_3e38c922"
@@ -19,26 +25,45 @@
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\prcab\\\\index.vue",
     "chunkName": "pages/prcab/index",
     "_name": "_16bec784"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\deposit\\\\index.vue",
+    "chunkName": "pages/deposit/index"
+>>>>>>> bc0e5437f34c2641c2936d89163b9ce599f80163
   },
   {
     "name": "register",
     "path": "/register",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\register\\\\index.vue",
     "chunkName": "pages/register/index",
     "_name": "_7d46cf91"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\register\\\\index.vue",
+    "chunkName": "pages/register/index"
+>>>>>>> bc0e5437f34c2641c2936d89163b9ce599f80163
   },
   {
     "name": "withdraw",
     "path": "/withdraw",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\withdraw\\\\index.vue",
     "chunkName": "pages/withdraw/index",
     "_name": "_2fc5fcca"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\withdraw\\\\index.vue",
+    "chunkName": "pages/withdraw/index"
+>>>>>>> bc0e5437f34c2641c2936d89163b9ce599f80163
   },
   {
     "name": "index",
     "path": "/",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
     "_name": "_fdf6cbd8"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+>>>>>>> bc0e5437f34c2641c2936d89163b9ce599f80163
   }
 ]

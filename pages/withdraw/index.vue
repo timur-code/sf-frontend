@@ -35,11 +35,44 @@ export default {
   data() {
     return {
     bal: '',
-    money: ''
+    money: 0
     }
   },
   async mounted(){
-        const user = JSON.parse(localStorage.getItem('user'));
+       this.refreshbalance()
+
+    },
+    
+     
+    
+    methods: {
+    name: 'withdraw',
+     async withdraw() {
+       console.log(this.money);
+         const user = JSON.parse(localStorage.getItem('user'));  
+        const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/withdraw`, {
+          method: 'POST',
+          headers:
+              {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('jwt')
+              },
+              
+            body: JSON.stringify({
+                amount: this.money
+            })
+          
+        })
+        if (response.status === 400){
+            alert('Not enough')
+        }
+        console.log(response.json());
+        this.refreshbalance()
+        },
+        name: 'refreshbalance',
+      async refreshbalance(){
+      const user = JSON.parse(localStorage.getItem('user'));
         const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/balance`, {
        method: 'GET',
         headers: {'Content-Type': 'application/json',
@@ -50,47 +83,13 @@ export default {
       const con = await response.json();
         console.log(con);
         this.bal = JSON.parse(con.balance);
-        
-        localStorage.setItem('wallet', JSON.stringify(con));
-
-    },
-    
-       
-    
-    methods: {
-    name: 'withdraw',
-     async withdraw() {
-         const user = JSON.parse(localStorage.getItem('user'));
-         const wall = JSON.parse(localStorage.getItem('wallet'));
-         if(wall.balance >= this.money){
-        const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/withdraw`, {
-          method: 'POST',
-          
-          headers:
-              {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'Authorization': 'Bearer ' + localStorage.getItem('jwt')
-              },
-              
-            body: JSON.stringify({
-                balance: wall.balance - this.money
-            })
-            
-        })
-        console.log(response.json());
-        await this.$router.push('/cabinet');
-        } else {
-            alert('No enough money.')
-        }
-        
-        
+     }      
      }
 
         
 
     }
-  }
+  
 </script>
 
 
