@@ -2,31 +2,36 @@
   {
     "name": "cabinet",
     "path": "/cabinet",
-    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\cabinet\\\\index.vue",
-    "chunkName": "pages/cabinet/index"
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\cabinet\\\\index.vue",
+    "chunkName": "pages/cabinet/index",
+    "_name": "_0304728e"
   },
   {
     "name": "deposit",
     "path": "/deposit",
-    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\deposit\\\\index.vue",
-    "chunkName": "pages/deposit/index"
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\deposit\\\\index.vue",
+    "chunkName": "pages/deposit/index",
+    "_name": "_cb926a9a"
   },
   {
     "name": "register",
     "path": "/register",
-    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\register\\\\index.vue",
-    "chunkName": "pages/register/index"
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\register\\\\index.vue",
+    "chunkName": "pages/register/index",
+    "_name": "_bdedffc0"
   },
   {
     "name": "withdraw",
     "path": "/withdraw",
-    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\withdraw\\\\index.vue",
-    "chunkName": "pages/withdraw/index"
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\withdraw\\\\index.vue",
+    "chunkName": "pages/withdraw/index",
+    "_name": "_53882d59"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend-1\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_69006163"
   }
 ]
