@@ -1,7 +1,7 @@
 <template>
   <div class="main" :style="mainStyle">
     <h1>RANT</h1>
-    <h1>Deposit</h1>
+    <h1>Withdraw</h1>
 
     <p> Balance:{{bal}} </p>
 
@@ -15,7 +15,7 @@
     <button
       type="button"
       class="button2"
-      id="deposit"
+      id="withdraw"
       :style="inputStyle"
       @click.prevent="deposit"
     >
@@ -35,11 +35,15 @@ export default {
   data() {
     return {
     bal: '',
-    money: ''
+    money: 0
     }
   },
   async mounted(){
        this.refreshbalance()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4c5336950d45c6e712817e5cbbea4de05adf721c
     },
     
      
@@ -63,7 +67,11 @@ export default {
             })
           
         })
+<<<<<<< HEAD
       
+=======
+        
+>>>>>>> 4c5336950d45c6e712817e5cbbea4de05adf721c
         console.log(response.json());
         this.refreshbalance()
         },
@@ -94,6 +102,7 @@ export default {
 
 
 
+<<<<<<< HEAD
 <style>
 /* Import Poppins font: */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -163,3 +172,7 @@ img:hover {
   border-radius: 200rem;
 }
 </style>
+=======
+
+
+>>>>>>> 4c5336950d45c6e712817e5cbbea4de05adf721c
