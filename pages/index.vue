@@ -13,7 +13,7 @@
     <div class="input">
      <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
      <input class="form-control" type="password" v-model="password" placeholder="Password">
-</div>
+
 
 
     <button
@@ -23,30 +23,21 @@
       :style="inputStyle"
     > Sign in
     </button>
+<br />
 
+    <div class="links">
+     <nuxt-link 
+class="bottom-footer__link"
+ to="/register">forgot password</nuxt-link>
+
+<nuxt-link 
+class="bottom-footer__link"
+ to="/register">Sign up</nuxt-link>
+</div>
     
-     <br />
-     <div id="app">
-    <input
-      type="button"
-      value="forgot password"
-      class="button2"
-      id="fpassword"
-      :style="inputStyle"
-    />
-
-    <nuxt-link
-        to="/register"
-        class="button3"
-        id="signup"
-        :style="inputStyle"
-    >
-      Sign up
-    </nuxt-link>
 
     </div>
-
-  </div>
+</div>
 </template>
 
 <script>
@@ -160,6 +151,29 @@ button {
   user-select: none;
   background: white;
 }
+
+link {
+  border-radius: 3rem ;
+  border:#000000;
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+  width: 30%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+   cursor: pointer;
+  user-select: none;
+  border:grey;
+  margin:grey;
+}
+
+.bottom-footer__link {
+  color:black;
+  text-decoration: none;
+  margin-block: 56px;
+}
+
 img {
   height: 2.2rem;
   margin: 10px;

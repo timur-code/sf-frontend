@@ -21,6 +21,13 @@
       <span>Deposit</span>
     </nuxt-link>
 
+ <nuxt-link
+        to="/transfer"
+        class="button2"
+    >
+      <span>Transfer</span>
+    </nuxt-link>
+
        <button
       class="button"
       id="logout"

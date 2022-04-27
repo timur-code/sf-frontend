@@ -6,8 +6,9 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _bb0075b0 = () => interopDefault(import('..\\pages\\cabinet\\index.vue' /* webpackChunkName: "pages/cabinet/index" */))
 const _3e38c922 = () => interopDefault(import('..\\pages\\deposit\\index.vue' /* webpackChunkName: "pages/deposit/index" */))
-const _16bec784 = () => interopDefault(import('..\\pages\\prcab\\index.vue' /* webpackChunkName: "pages/prcab/index" */))
+const _074cb39e = () => interopDefault(import('..\\pages\\product\\index.vue' /* webpackChunkName: "pages/product/index" */))
 const _7d46cf91 = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
+const _3dc12949 = () => interopDefault(import('..\\pages\\transfer\\index.vue' /* webpackChunkName: "pages/transfer/index" */))
 const _2fc5fcca = () => interopDefault(import('..\\pages\\withdraw\\index.vue' /* webpackChunkName: "pages/withdraw/index" */))
 const _fdf6cbd8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -31,13 +32,17 @@ export const routerOptions = {
     component: _3e38c922,
     name: "deposit"
   }, {
-    path: "/prcab",
-    component: _16bec784,
-    name: "prcab"
+    path: "/product",
+    component: _074cb39e,
+    name: "product"
   }, {
     path: "/register",
     component: _7d46cf91,
     name: "register"
+  }, {
+    path: "/transfer",
+    component: _3dc12949,
+    name: "transfer"
   }, {
     path: "/withdraw",
     component: _2fc5fcca,

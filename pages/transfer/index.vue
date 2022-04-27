@@ -1,29 +1,39 @@
 <template>
   <div class="main" :style="mainStyle">
     <h1>RANT</h1>
-    <h1>Deposit</h1>
+    <h1>Transfer</h1>
 
-    <p> Balance:{{bal}} </p>
+<input
+      v-model="user"
+      type="text"
+      name="phone"
+      id="phone"
+      placeholder="Phonenumber"
+    />
+    <br />
 
-    <input
-      v-model="money"
-      type="number"
-      name="email"
-      id="email"
-      placeholder="Type your sum"
-    />  
-    <button
+    
+
+ <div class="form-group">
+<label>You Send</label>
+<input type="text" v-model="money" class="form-control" autocomplete="off" value="0">
+</div>
+
+<button
       type="button"
       class="button2"
-      id="deposit"
+      id="transfer"
       :style="inputStyle"
-      @click.prevent="deposit"
+      @click.prevent="transfer"
     >
-      Deposit
+      Transfer
     </button>
 
 
-    </div>
+</div>
+
+
+
 </template>
 
 <script>
@@ -34,8 +44,8 @@ export default {
   },
   data() {
     return {
-    bal: '',
-    money: ''
+    user: '',
+    money: 0
     }
   },
   async mounted(){
@@ -45,11 +55,11 @@ export default {
      
     
     methods: {
-    name: 'deposit',
-     async deposit() {
+    name: 'transfer',
+     async transfer() {
        console.log(this.money);
          const user = JSON.parse(localStorage.getItem('user'));  
-        const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/deposit`, {
+        const response = await fetch(`https://sf-rant-backend.herokuapp.com/user/${user.id}/transfer`, {
           method: 'POST',
           headers:
               {
@@ -59,7 +69,9 @@ export default {
               },
               
             body: JSON.stringify({
-                amount: this.money
+                userTo: this.user,
+                amount: this.money 
+
             })
           
         })
