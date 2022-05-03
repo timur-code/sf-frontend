@@ -40,10 +40,6 @@ export default {
   },
   async mounted(){
        this.refreshbalance()
-<<<<<<< HEAD
-=======
-
->>>>>>> 4c5336950d45c6e712817e5cbbea4de05adf721c
     },
     
      
@@ -67,11 +63,7 @@ export default {
             })
           
         })
-<<<<<<< HEAD
-      
-=======
-        
->>>>>>> 4c5336950d45c6e712817e5cbbea4de05adf721c
+
         console.log(response.json());
         this.refreshbalance()
         },
@@ -172,7 +164,5 @@ img:hover {
   border-radius: 200rem;
 }
 </style>
-=======
 
 
->>>>>>> 4c5336950d45c6e712817e5cbbea4de05adf721c
