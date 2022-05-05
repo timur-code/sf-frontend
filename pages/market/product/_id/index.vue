@@ -36,7 +36,6 @@ export default {
     async mounted(){
       if(process.browser)
         this.product = await this.loadProduct()
-      console.log(await this.getCart())
     },
     methods:{
         async loadProduct() {
@@ -60,16 +59,6 @@ export default {
                   'Authorization': `Bearer ${jwt}`
                 }
           })
-        },
-        async getCart() {
-          let jwt = localStorage.getItem('jwt');
-          const headers = {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${jwt}`
-          }
-          return await this.$axios.get('/market/cart', {
-            headers: headers
-          }).then(response => response.data)
         }
     }
 
