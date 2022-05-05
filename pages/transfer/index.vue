@@ -3,21 +3,23 @@
     <h1>RANT</h1>
     <h1>Transfer</h1>
 
-<input
-      v-model="user"
-      type="text"
-      name="phone"
-      id="phone"
-      placeholder="Phonenumber"
-    />
-    <br />
+<div class="transfer-form">
 
-    
+
+
+<div class="form-group">
+<label class="text-field__label" for="login">Phone:</label>
+<input type="text" v-model="user" class="form-control" autocomplete="off" value="0">
+</div>  
 
  <div class="form-group">
-<label>You Send</label>
+<label class="text-field__label" for="login">You send: </label>
 <input type="text" v-model="money" class="form-control" autocomplete="off" value="0">
 </div>
+
+
+</div>
+
 
 <button
       type="button"
@@ -45,7 +47,7 @@ export default {
   data() {
     return {
     user: '',
-    money: 0
+    money: ''
     }
   },
   async mounted(){
@@ -133,24 +135,36 @@ h1 {
   color: #000000;
 }
 
+.transfer-form{
+  margin-bottom: 1rem;
+}
+.text-field__label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.text-field__input::placeholder {
+  color: #212529;
+  opacity: 0.4;
+}
 input {
-  border-radius: 3rem;
-  border: none;
   padding: 10px;
   text-align: center;
   outline: none;
   margin: 10px;
   width: 30%;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #212529;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
 }
-input:hover {
-  box-shadow: 0px 0px 8px -5px #000000;
-}
-input:active {
-  box-shadow: 0px 0px 8px -5px #000000;
-}
+
+
+
 #signin {
   box-shadow: grey;
 }
@@ -163,6 +177,8 @@ input:active {
   cursor: pointer;
   user-select: none;
   background: white;
+  border: inherit;
+  margin: auto;
 }
 img {
   height: 2.2rem;
