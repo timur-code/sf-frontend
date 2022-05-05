@@ -15,7 +15,7 @@
      <input class="form-control" type="password" v-model="password" placeholder="Password">
 
 
-
+<br/>
     <button
       class="button"
       id="signin"
@@ -23,16 +23,19 @@
       :style="inputStyle"
     > Sign in
     </button>
-<br />
+<br/>
 
-    <div class="links">
+    <div class="link">
+    
      <nuxt-link 
 class="bottom-footer__link"
  to="/register">forgot password</nuxt-link>
-
+     
+    
 <nuxt-link 
 class="bottom-footer__link"
  to="/register">Sign up</nuxt-link>
+    
 </div>
     
 
@@ -126,6 +129,7 @@ input {
   border:grey;
   margin:grey;
 }
+
 
 #signin {
   border-radius: 3rem;

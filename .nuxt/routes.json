@@ -1,7 +1,15 @@
 [
   {
+    "name": "addproduct",
+    "path": "/addproduct",
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\addproduct\\\\index.vue",
+    "chunkName": "pages/addproduct/index",
+    "_name": "_ce6ebb16"
+  },
+  {
     "name": "cabinet",
     "path": "/cabinet",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\cabinet\\\\index.vue",
     "chunkName": "pages/cabinet/index"
   },
@@ -10,10 +18,16 @@
     "path": "/cart",
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\cart\\\\index.vue",
     "chunkName": "pages/cart/index"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\cabinet\\\\index.vue",
+    "chunkName": "pages/cabinet/index",
+    "_name": "_0304728e"
+>>>>>>> dc352b89a26f54d4a78cb7c0c657a20f4986b37f
   },
   {
     "name": "deposit",
     "path": "/deposit",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\deposit\\\\index.vue",
     "chunkName": "pages/deposit/index"
   },
@@ -34,29 +48,65 @@
     "path": "/navbar",
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\navbar\\\\index.vue",
     "chunkName": "pages/navbar/index"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\deposit\\\\index.vue",
+    "chunkName": "pages/deposit/index",
+    "_name": "_cb926a9a"
+  },
+  {
+    "name": "product",
+    "path": "/product",
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\product\\\\index.vue",
+    "chunkName": "pages/product/index",
+    "_name": "_5857a7c2"
+>>>>>>> dc352b89a26f54d4a78cb7c0c657a20f4986b37f
   },
   {
     "name": "register",
     "path": "/register",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\register\\\\index.vue",
     "chunkName": "pages/register/index"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\register\\\\index.vue",
+    "chunkName": "pages/register/index",
+    "_name": "_bdedffc0"
+>>>>>>> dc352b89a26f54d4a78cb7c0c657a20f4986b37f
   },
   {
     "name": "transfer",
     "path": "/transfer",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\transfer\\\\index.vue",
     "chunkName": "pages/transfer/index"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\transfer\\\\index.vue",
+    "chunkName": "pages/transfer/index",
+    "_name": "_618359d8"
+>>>>>>> dc352b89a26f54d4a78cb7c0c657a20f4986b37f
   },
   {
     "name": "withdraw",
     "path": "/withdraw",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\withdraw\\\\index.vue",
     "chunkName": "pages/withdraw/index"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\withdraw\\\\index.vue",
+    "chunkName": "pages/withdraw/index",
+    "_name": "_53882d59"
+>>>>>>> dc352b89a26f54d4a78cb7c0c657a20f4986b37f
   },
   {
     "name": "index",
     "path": "/",
+<<<<<<< HEAD
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
+=======
+    "component": "C:\\\\Users\\\\w2\\\\Documents\\\\Rakhat\\\\VS code\\\\sf-frontend\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_69006163"
+>>>>>>> dc352b89a26f54d4a78cb7c0c657a20f4986b37f
   }
 ]

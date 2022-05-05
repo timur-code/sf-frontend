@@ -161,7 +161,5 @@ img:hover {
   border-radius: 200rem;
 }
 </style>
-=======
 
 
->>>>>>> 4c5336950d45c6e712817e5cbbea4de05adf721c
