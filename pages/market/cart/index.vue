@@ -36,7 +36,7 @@
 
         <div class="card">
           <div class="card-body">
-            <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+            <b-button variant="success" @click="buyCart" class="btn btn-warning btn-block btn-lg">Proceed to Pay</b-button>
           </div>
         </div>
       </div>
@@ -86,6 +86,21 @@ export default {
     },
     async reloadCart() {
       this.cartProducts = await this.getCart();
+    },
+    async buyCart() {
+      let jwt = localStorage.getItem('jwt');
+      let response = await fetch(`https://sf-rant-backend.herokuapp.com/market/cart/buy`, {
+        method: 'POST',
+        headers:
+            {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'Authorization': `Bearer ${jwt}`
+            }
+      }).then(response => {
+        console.log(response.status)
+      })
+      await this.reloadCart()
     },
     checkout() {
       const string = this.products
