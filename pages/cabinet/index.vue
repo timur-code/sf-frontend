@@ -8,25 +8,25 @@
       </p>
 
       <nuxt-link
-        to="/withdraw"
-        class="button2"
-    >
-      <span>Withdraw</span>
-    </nuxt-link>
+to="/withdraw"
+class="button2"
+>
+<span>Withdraw</span>
+</nuxt-link>
 
 <nuxt-link
-        to="/deposit"
-        class="button2"
-    >
-      <span>Deposit</span>
-    </nuxt-link>
+to="/deposit"
+class="button2"
+>
+<span>Deposit</span>
+</nuxt-link>
 
  <nuxt-link
-        to="/transfer"
-        class="button2"
-    >
-      <span>Transfer</span>
-    </nuxt-link>
+to="/transfer"
+class="button2"
+>
+<span>Transfer</span>
+</nuxt-link>
 
        <button
       class="button"
@@ -59,6 +59,7 @@ export default Vue.extend({
       const response = await fetch('https://sf-rant-backend.herokuapp.com/', {
        method: 'GET',
         headers: {'Content-Type': 'application/json',
+        'Accept': 'application/json',
         'Authorization': 'Bearer ' + localStorage.getItem('jwt')
         }
       
