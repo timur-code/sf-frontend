@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueMq from 'vue-mq'
+import store from './store/index.js'
+import Products from './components/Products.vue'
+import Cart from './components/Cart.vue'
+import Liked from './components/Liked.vue'
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -40,6 +44,28 @@ new Vue({
       '@/node_modules/bootstrap/dist/css/bootstrap.min.css'  
     ]
   
+    
 
   }
+
+  Vue.use(VueRouter)
+
+// Define routes
+const routes = [
+  { path: '/', component: Products },
+  { path: '/cart', component: Cart },
+  { path: '/liked', component: Liked },
+]
+
+// Register routes
+const router = new VueRouter({
+  routes,
+})
+
+new Vue({
+  el: '#app',
+  render: (h) => h(App),
+  router,
+  store,
+})
   

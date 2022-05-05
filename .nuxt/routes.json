@@ -3,42 +3,60 @@
     "name": "cabinet",
     "path": "/cabinet",
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\cabinet\\\\index.vue",
-    "chunkName": "pages/cabinet/index",
-    "_name": "_bb0075b0"
+    "chunkName": "pages/cabinet/index"
+  },
+  {
+    "name": "cart",
+    "path": "/cart",
+    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\cart\\\\index.vue",
+    "chunkName": "pages/cart/index"
   },
   {
     "name": "deposit",
     "path": "/deposit",
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\deposit\\\\index.vue",
-    "chunkName": "pages/deposit/index",
-    "_name": "_3e38c922"
+    "chunkName": "pages/deposit/index"
+  },
+  {
+    "name": "liked",
+    "path": "/liked",
+    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\liked\\\\index.vue",
+    "chunkName": "pages/liked/index"
+  },
+  {
+    "name": "market",
+    "path": "/market",
+    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\market\\\\index.vue",
+    "chunkName": "pages/market/index"
+  },
+  {
+    "name": "navbar",
+    "path": "/navbar",
+    "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\navbar\\\\index.vue",
+    "chunkName": "pages/navbar/index"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\register\\\\index.vue",
-    "chunkName": "pages/register/index",
-    "_name": "_7d46cf91"
+    "chunkName": "pages/register/index"
   },
   {
     "name": "transfer",
     "path": "/transfer",
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\transfer\\\\index.vue",
-    "chunkName": "pages/transfer/index",
-    "_name": "_3dc12949"
+    "chunkName": "pages/transfer/index"
   },
   {
     "name": "withdraw",
     "path": "/withdraw",
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\withdraw\\\\index.vue",
-    "chunkName": "pages/withdraw/index",
-    "_name": "_2fc5fcca"
+    "chunkName": "pages/withdraw/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\HP\\\\Desktop\\\\2-course 6-tri\\\\Software Factory\\\\git\\\\sf-frontend\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_fdf6cbd8"
+    "chunkName": "pages/index"
   }
 ]

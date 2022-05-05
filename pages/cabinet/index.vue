@@ -28,6 +28,13 @@
       <span>Transfer</span>
     </nuxt-link>
 
+<nuxt-link
+        to="/market"
+        class="button2"
+    >
+      <span>Market</span>
+    </nuxt-link>
+
        <button
       class="button"
       id="logout"
