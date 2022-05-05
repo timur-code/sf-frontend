@@ -28,17 +28,18 @@ class="button2"
 <span>Transfer</span>
 </nuxt-link>
 
-<nuxt-link
-        to="/market"
-        class="button2"
-    >
-      <span>Market</span>
-    </nuxt-link>
+<a
+  :href="'/market'"
+  target="_blank"
+  class="button2"
+>
+  <span>Market</span>
+</a>
 
        <button
       class="button"
       id="logout"
-      @click.prevent="logout"
+      @click="logout"
       :style="inputStyle"
     >
       Log out
@@ -94,7 +95,7 @@ export default Vue.extend({
   })
 </script>
 
-<style>
+<style scoped>
 /* Import Poppins font: */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .main {
