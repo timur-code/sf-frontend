@@ -40,7 +40,7 @@
       class="button"
       id="addproduct"
       :style="inputStyle"
-      @click.prevent="addprod"
+      @click="addprod"
     >Add product
     </button>
 
@@ -76,12 +76,12 @@ export default {
               },
           body: JSON.stringify({
             name: this.name,
-            imgLink: this.ingLink,
+            imgLink: this.imgLink,
             description: this.description,
             price: this.price
           })
         }).then(response=>response.json()).then((responseData) => {
-          console.log(responseData.jwt)
+          console.log(responseData)
         })
         await this.$router.push('/cabinet')
      }
@@ -91,18 +91,6 @@ export default {
     }
   }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
 <style>
 /* Import Poppins font: */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
