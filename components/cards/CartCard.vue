@@ -48,9 +48,8 @@ export default {
   },
   methods: {
     async removeFromCart () {
-      //Пока не работает на бэкенде, позже будет
       let jwt = localStorage.getItem('jwt');
-      fetch(`https://sf-rant-backend.herokuapp.com/market/cart/${this.id}/remove`, {
+      await fetch(`https://sf-rant-backend.herokuapp.com/market/cart/${this.id}/remove`, {
         method: 'POST',
         headers:
             {
