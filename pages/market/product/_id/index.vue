@@ -65,19 +65,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
-.product-img img {
-  box-sizing: border-box;
-  width: 100%;
-  object-fit: cover;
+.product-img {
+  img {
+    box-sizing: border-box;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .product-body {
   font-size: 1.5rem;
-}
 
-.product-body .product-name{
-  font-size: 2rem;
+  .product-name{
+    font-size: 2rem;
+  }
 }
 </style>

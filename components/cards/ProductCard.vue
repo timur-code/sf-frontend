@@ -53,14 +53,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .product-card {
   width: 300px;
-}
 
-.product-card img {
-  box-sizing: border-box;
-  width: 100%;
-  object-fit: cover;
+  img {
+    box-sizing: border-box;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 </style>
