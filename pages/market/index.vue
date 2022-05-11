@@ -11,19 +11,6 @@
             </div>
         </header>
         <!-- Section-->
-        <!--
-        <Dropdown
-    :options="[{ id: 1, name: 'Option 1'}, { id: 2, name: 'Option 2'}]"
-    v-on:selected="validateSelection"
-    v-on:filter="getDropdownValues"
-    :disabled="false"
-    name="zipcode"
-    :maxItem="10"
-    placeholder="Please select an option">
-      </Dropdown>
--->
-
-
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="d-flex flex-row flex-wrap products-list justify-content-center" v-if="products">
@@ -46,7 +33,6 @@
 </template>
 
 <script>
-/*import Dropdown from 'vue-simple-search-dropdown';*/
 import NavBar from "../../components/navbar/NavBar";
 import ProductCard from "../../components/cards/ProductCard";
 
