@@ -1,6 +1,37 @@
 <template>
     <div>
-        <nav-bar/>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+      <nuxt-link class="navbar-brand" :to="'/cabinet'">Finance App</nuxt-link>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item"><nuxt-link class="nav-link" aria-current="page" :to="'/cabinet'">Home</nuxt-link></li>
+          <li class="nav-item"><nuxt-link class="nav-link" :to="'/market'">Store</nuxt-link></li>
+          <li class="dropdown">
+    <div class="dropdown">
+  <button class="dropbtn">Categories</button>
+  <div class="dropdown-content">
+  <a href="#">TV</a>
+  <a href="#">PC</a>
+  <a href="#">Games</a>
+  </div>
+</div>
+  </li>
+        </ul>
+        <form class="d-flex">
+          <nuxt-link class="btn btn-outline-dark" :to="'/market/cart'">
+            <i class="bi-cart-fill me-1"></i>
+            Cart
+            <!--<span class="badge bg-dark text-white ms-1 rounded-pill">0</span>-->
+          </nuxt-link>
+        </form>
+      </div>
+    </div>
+  </nav>
+        
+  
         <!-- Header-->
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
@@ -33,12 +64,11 @@
 </template>
 
 <script>
-import NavBar from "../../components/navbar/NavBar";
+
 import ProductCard from "../../components/cards/ProductCard";
 
 export default {
   components: {
-    NavBar,
     ProductCard
   },
   props: {
@@ -72,7 +102,48 @@ export default {
 </script>
 
 <style scoped>
+
+
+
+.dropbtn {
+  background-color:white;
+  color: #0000008C;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 .products-list {
   gap: 2rem;
 }
+
 </style>
