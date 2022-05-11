@@ -56,10 +56,7 @@ export default {
     inputStyle: String,
   },
   async mounted(){
-    let jwt = localStorage.getItem('jwt')
-    if(jwt) {
-      await this.$router.push('/cabinet');
-    }
+    
   },
   created() {
     // axios.defaults.headers.common['Content-Type'] = 'application/json';
