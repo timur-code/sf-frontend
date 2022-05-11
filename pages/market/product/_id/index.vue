@@ -29,6 +29,7 @@ export default {
       NavBar
     },
     data() {
+      
         return {
           product: null
         }

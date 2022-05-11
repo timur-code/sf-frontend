@@ -27,10 +27,6 @@
 
     <div class="link">
     
-     <nuxt-link 
-class="bottom-footer__link"
- to="/register">forgot password</nuxt-link>
-     
     
 <nuxt-link 
 class="bottom-footer__link"
@@ -59,13 +55,22 @@ export default {
     mainStyle: String,
     inputStyle: String,
   },
+  async mounted(){
+    let jwt = localStorage.getItem('jwt')
+    if(jwt) {
+      await this.$router.push('/cabinet');
+    }
+  },
   created() {
     // axios.defaults.headers.common['Content-Type'] = 'application/json';
     // axios.defaults.headers.common['Accept'] = 'application/json';
   },
   methods: {
+
+
     async login (){
-      await fetch('https://sf-rant-backend.herokuapp.com/authenticate', {
+        
+        const response = await fetch('https://sf-rant-backend.herokuapp.com/authenticate', {
         method: 'POST',
         headers:
             {
@@ -78,12 +83,20 @@ export default {
           username: this.userName,
           password: this.password
         })
-      }).then(response=> response.json()).then((responseData) => {
+        
+      }).then(response=> response.json()).then((responseData)=> {
+        
         console.log(responseData.jwt)
         localStorage.setItem('jwt', responseData.jwt);
         
+      }).catch(err => {
+        console.log(err)
+        alert('Incorrect email or password')
+        window.location.reload();
       })
+      
       await this.$router.push('/cabinet');
+       
     }
   }
 };

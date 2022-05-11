@@ -12,34 +12,6 @@
         {{phoneNumber}}
       </p>
 
-      <nuxt-link
-to="/withdraw"
-class="button2"
->
-<span>Withdraw</span>
-</nuxt-link>
-
-<nuxt-link
-to="/deposit"
-class="button2"
->
-<span>Deposit</span>
-</nuxt-link>
-
- <nuxt-link
-to="/transfer"
-class="button2"
->
-<span>Transfer</span>
-</nuxt-link>
-
-<a
-  :href="'/market'"
-  target="_blank"
-  class="button2"
->
-  <span>Market</span>
-</a>
 
        <button
       class="button"

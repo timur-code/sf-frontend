@@ -8,6 +8,10 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
           <li class="nav-item"><nuxt-link class="nav-link" aria-current="page" :to="'/cabinet'">Home</nuxt-link></li>
           <li class="nav-item"><nuxt-link class="nav-link" :to="'/market'">Store</nuxt-link></li>
+          <li class="nav-item"><nuxt-link class="nav-link" :to="'/deposit'">Deposit</nuxt-link></li>
+          <li class="nav-item"><nuxt-link class="nav-link" :to="'/withdraw'">Withdraw</nuxt-link></li>
+          <li class="nav-item"><nuxt-link class="nav-link" :to="'/transfer'">Transfer</nuxt-link></li>
+          <li class="nav-item"><nuxt-link class="nav-link" :to="'/addproduct'">Add Product</nuxt-link></li>
         </ul>
         <form class="d-flex">
           <nuxt-link class="btn btn-outline-dark" :to="'/market/cart'">
