@@ -4,7 +4,7 @@
 
   <div class="main" :style="mainStyle">
     <h1>RANT</h1>
-    <h1>Withdraw</h1>
+    <h1>Deposit</h1>
 
     <p> Balance:{{bal}} </p>
 
@@ -18,7 +18,7 @@
     <button
       type="button"
       class="button2"
-      id="withdraw"
+      id="deposit"
       :style="inputStyle"
       @click.prevent="deposit"
     >
