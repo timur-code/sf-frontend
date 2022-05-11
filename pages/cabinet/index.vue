@@ -46,7 +46,7 @@ export default Vue.extend({
     }
   },
   async mounted() {
-    
+   
       const response = await fetch('https://sf-rant-backend.herokuapp.com/', {
        method: 'GET',
         headers: {'Content-Type': 'application/json',
