@@ -1,5 +1,10 @@
 <template>
+<div>
+<nav-bar/>
+
 <div class="main" :style="mainStyle">
+
+
 
     <h1>RANT</h1>
     <p> {{userName}} <br>
@@ -47,14 +52,20 @@ class="button2"
       </button>
 </div>
 
-
+</div>
 </template>
 
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+
+
+import NavBar from "../../components/navbar/NavBar";
+import Vue from 'vue';
 export default Vue.extend({
-  
+  components: {
+    NavBar,
+  },
+
   data() {
     return {
       userName: '',
@@ -93,6 +104,8 @@ export default Vue.extend({
     }
     
   })
+
+  
 </script>
 
 <style scoped>

@@ -1,4 +1,7 @@
 <template>
+<div>
+<nav-bar/>
+
   <div class="main" :style="mainStyle">
     <h1>RANT</h1>
     <h1>Transfer</h1>
@@ -35,11 +38,16 @@
 </div>
 
 
-
+</div>
 </template>
 
 <script>
+import NavBar from "../../components/navbar/NavBar";
+
 export default {
+  components: {
+    NavBar,
+  },
     props: {
     mainStyle: String,
     inputStyle: String,
