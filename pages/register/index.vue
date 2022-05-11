@@ -22,7 +22,7 @@
       type="text"
       name="phone"
       id="phone"
-      placeholder="Phonenumber"
+      placeholder="Number(777-777-7777)"
     />
     <br />
 
@@ -41,16 +41,7 @@
       @click.prevent="register"
     >Register
     </button>
-
-     <br />
-    <input
-      type="button"
-      value="Forgot password"
-      class="button2"
-      id="fpassword"
-      :style="inputStyle"
-    />
-
+  <br />
     <nuxt-link
         to="/"
         class="button2"
@@ -78,6 +69,18 @@ export default {
   },
   methods: {
      async register() {
+       var phoneN = /^[2-9]\d{2}-\d{3}-\d{4}$/;
+          if (this.number.match(phoneN)){
+            console.log()
+          } else {
+            alert('Wrong phonenumber')
+            window.location.reload();
+          }
+
+
+
+
+
         await fetch('https://sf-rant-backend.herokuapp.com/authorize', {
           method: 'POST',
           headers:
@@ -97,7 +100,10 @@ export default {
           console.log(responseData.jwt)
           localStorage.setItem('jwt', responseData.jwt)
           
-        })
+        }).catch(err => {
+        console.log(err)
+        
+      })
         await this.$router.push('/');
      }
 

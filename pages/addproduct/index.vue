@@ -1,5 +1,8 @@
 <template>
+<div>
+<nav-bar/>
   <div class="main" :style="mainStyle">
+    
     <h1>RANT</h1>
     <p v-if="errorMessage.length > 0" class="text-danger">{{errorMessage}}</p>
     <input
@@ -56,16 +59,20 @@
     </button>
 
   </div>
+  </div>
 </template>
 
 
 <script>
-import { BFormSelect } from 'bootstrap-vue'
+import NavBar from "../../components/navbar/NavBar";
+import { BFormSelect } from 'bootstrap-vue';
+
 
 export default {
   name: "addprod",
   components: {
-    BFormSelect
+    BFormSelect,
+    NavBar,
   },
   data() {
     return {
