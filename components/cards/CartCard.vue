@@ -5,7 +5,7 @@
         <div class="col-md-2 col-lg-2 col-xl-2">
           <img
               :src="imgLink" loading="lazy"
-              class="img-fluid rounded-3" alt="Cotton T-shirt" style="object-fit: cover; width: 150px; height: 150px">
+              class="img-fluid rounded-3" alt="Missing image" style="object-fit: cover; width: 150px; height: 150px">
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3">
           <p class="lead fw-normal mb-2">{{name}}</p>
@@ -13,7 +13,7 @@
         <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
           <h5 class="mb-0">${{ price }}</h5>
         </div>
-        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+        <div class="col-md-1 col-lg-1 col-xl-1 text-end mr-5">
           <b-button variant="danger" @click="removeFromCart">Remove</b-button>
         </div>
       </div>

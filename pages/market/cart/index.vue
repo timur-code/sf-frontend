@@ -21,6 +21,9 @@
         />
 
         <div class="card">
+          <div class="px-4 pt-4 pb-0">
+            <span class="font-weight-bold h4">Total: </span><span class="h4">${{total}}</span>
+          </div>
           <div class="card-body">
             <b-button variant="success" @click="buyCart" class="btn btn-warning btn-block btn-lg">Proceed to Pay</b-button>
           </div>
@@ -44,12 +47,14 @@ export default {
   },
   data () {
     return {
-      cartProducts: []
+      cartProducts: [],
+      total: 0
     }
   },
   async beforeMount() {
     this.cartProducts = await this.getCart();
     console.log(this.cartProducts)
+    this.cartProducts.forEach(product => this.total += product.price)
   },
   methods: {
     async getCart() {
@@ -84,7 +89,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .cart_list {
   margin-bottom: 20px;
 }

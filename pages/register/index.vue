@@ -22,7 +22,7 @@
       type="text"
       name="phone"
       id="phone"
-      placeholder="Number(777-777-7777)"
+      placeholder="+7-777-777-77-77"
     />
     <br />
 
@@ -70,25 +70,18 @@ export default {
   methods: {
      async register() {
        var phoneN = /^[2-9]\d{2}-\d{3}-\d{4}$/;
-          if (this.number.match(phoneN)){
-            console.log()
-          } else {
-            alert('Wrong phonenumber')
-            window.location.reload();
-          }
-
-
-
-
-
+          // if (this.number.match(phoneN)){
+          //   console.log()
+          // } else {
+          //   alert('Wrong phonenumber')
+          //   window.location.reload();
+          // }
         await fetch('https://sf-rant-backend.herokuapp.com/authorize', {
           method: 'POST',
           headers:
               {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
-                /*,
-                'Authorization': 'Bearer ' + jwt*/
               },
           body: JSON.stringify({
             fullName: this.name,

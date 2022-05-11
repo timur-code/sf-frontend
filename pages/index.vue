@@ -1,42 +1,34 @@
 <template>
-
   <div class="main" :style="mainStyle">
     <h1>RANT</h1>
-
-
-    <div class="input">
+    <div class="input d-flex justify-content-center">
      <span class="input-group-addon">
        <i class="fa fa-envelope-o fa-fw"></i>
        </span>
-     <input class="form-control" type="text" v-model="userName" placeholder="Email">
-</div>
-    <div class="input">
-     <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-     <input class="form-control" type="password" v-model="password" placeholder="Password">
-
-
-<br/>
-    <button
-      class="button"
-      id="signin"
-      @click.prevent="login"
-      :style="inputStyle"
-    > Sign in
-    </button>
-<br/>
-
-    <div class="link">
-    
-    
-<nuxt-link 
-class="bottom-footer__link"
- to="/register">Sign up</nuxt-link>
-    
-</div>
-    
-
+     <input class="form-control" type="text" v-model="userName" placeholder="Email" style="width: 40%;">
     </div>
-</div>
+    <div class="input d-flex justify-content-center">
+     <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+     <input class="form-control" type="password" v-model="password" placeholder="Password" style="width: 40%;">
+    </div>
+    <br/>
+      <button
+        class="button"
+        id="signin"
+        @click.prevent="login"
+        :style="inputStyle"
+      > Sign in
+      </button>
+    <br/>
+      <div class="link">
+        <nuxt-link
+        class="bottom-footer__link"
+        to="/register">
+          Sign up
+        </nuxt-link>
+
+      </div>
+    </div>
 </template>
 
 <script>
@@ -136,8 +128,6 @@ input {
   font-weight: 400;
    cursor: pointer;
   user-select: none;
-  border:grey;
-  margin:grey;
 }
 
 

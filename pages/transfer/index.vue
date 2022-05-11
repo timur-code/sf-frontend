@@ -5,8 +5,9 @@
       <h1>RANT</h1>
       <h1>Transfer</h1>
       <div class="transfer-form w-100">
+        <p class="text-center">Balance: {{bal}}</p>
         <div class="form-group w-100 d-flex align-items-center flex-column">
-          <label class="text-field__label">Phone:</label>
+          <label class="text-field__label">Phone (or Email):</label>
           <input type="text" v-model="user" class="form-control" autocomplete="off" value="0">
         </div>
         <div class="form-group w-100 d-flex align-items-center flex-column">
@@ -24,6 +25,15 @@
         Transfer
       </button>
     </div>
+    <b-modal
+        v-model="errorShow"
+        :centered="true"
+        :body-text-variant="'danger'"
+        :body-class="'h3 text-center'"
+        :hide-footer="true"
+    >
+      Error during transfer
+    </b-modal>
   </div>
 </template>
 <script>
@@ -39,16 +49,15 @@ export default {
   },
   data() {
     return {
-    user: '',
-    money: ''
+      user: '',
+      money: null,
+      bal: null,
+      errorShow: false
     }
   },
   async mounted(){
        this.refreshbalance()
     },
-    
-     
-    
     methods: {
     name: 'transfer',
      async transfer() {
@@ -62,17 +71,18 @@ export default {
                 'Accept': 'application/json',
                 'Authorization': 'Bearer ' + localStorage.getItem('jwt')
               },
-              
             body: JSON.stringify({
                 userTo: this.user,
-                amount: this.money 
-
+                amount: this.money
             })
-          
+        }).then((response) => {
+          if(!response.ok) {
+            this.errorShow = true
+          } else {
+            this.errorShow = false
+          }
+          this.refreshbalance()
         })
-      
-        console.log(response.json());
-        this.refreshbalance()
         },
         name: 'refreshbalance',
       async refreshbalance(){
