@@ -2,18 +2,17 @@
 <div>
 <nav-bar/>
 
-  <div class="main" :style="mainStyle">
+  <div class="deposit-page d-flex flex-column align-items-center" :style="mainStyle">
     <h1>RANT</h1>
     <h1>Deposit</h1>
-
     <p> Balance:{{bal}} </p>
-
     <input
       v-model="money"
       type="number"
       name="email"
       id="email"
       placeholder="Type your sum"
+      class="w-25"
     />  
     <button
       type="button"
@@ -24,10 +23,8 @@
     >
       Deposit
     </button>
-
-
-    </div>
-    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -51,9 +48,6 @@ export default {
   async mounted(){
        this.refreshbalance()
     },
-    
-     
-    
     methods: {
     name: 'deposit',
      async deposit() {
@@ -96,15 +90,10 @@ export default {
     }
   
 </script>
-
-
-
-
-
-<style>
+<style scoped lang="scss">
 /* Import Poppins font: */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-.main {
+.deposit-page {
   background: rgba(255, 255, 255, 0.4);
   position: absolute;
   top: 20%;
@@ -117,57 +106,49 @@ export default {
   padding-top: 3%;
   padding-bottom: 5%;
   font-family: "Poppins", sans-serif;
-}
-h1 {
-  cursor: default;
-  user-select: none;
-}
 
-.fa {
-  font-size: 28px;
-  color: #000000;
-}
+  h1 {
+    cursor: default;
+    user-select: none;
+  }
 
-input {
-  border-radius: 3rem;
-  border: none;
-  padding: 10px;
-  text-align: center;
-  outline: none;
-  margin: 10px;
-  width: 30%;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
-input:hover {
-  box-shadow: 0px 0px 8px -5px #000000;
-}
-input:active {
-  box-shadow: 0px 0px 8px -5px #000000;
-}
-#signin {
-  box-shadow: grey;
-}
-.button {
-  cursor: pointer;
-  user-select: none;
-}
+  .fa {
+    font-size: 28px;
+    color: #000000;
+  }
 
-.button2 {
-  cursor: pointer;
-  user-select: none;
-  background: white;
-}
-img {
-  height: 2.2rem;
-  margin: 10px;
-  user-select: none;
-}
-img:hover {
-  box-shadow: 0px 0px 8px -5px #000000;
-  cursor: pointer;
-  border-radius: 200rem;
+  input {
+    border-radius: 3rem;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    margin: 10px;
+    width: 30%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+  input:hover {
+    box-shadow: 0px 0px 8px -5px #000000;
+  }
+  input:active {
+    box-shadow: 0px 0px 8px -5px #000000;
+  }
+  #signin {
+    box-shadow: grey;
+  }
+  .button {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .button2 {
+    cursor: pointer;
+    user-select: none;
+    background: white;
+    border: none;
+  }
 }
 </style>
 

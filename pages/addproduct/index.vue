@@ -1,8 +1,7 @@
 <template>
 <div>
-<nav-bar/>
-  <div class="main" :style="mainStyle">
-    
+  <nav-bar/>
+  <div class="add-product d-flex align-items-center flex-column" :style="mainStyle">
     <h1>RANT</h1>
     <p v-if="errorMessage.length > 0" class="text-danger">{{errorMessage}}</p>
     <input
@@ -34,6 +33,7 @@
         :options="categories"
         name="category"
         id="category"
+        style="width: 40%"
     >
       <template #first>
         <b-form-select-option value="" disabled>Please select an option</b-form-select-option>
@@ -48,18 +48,15 @@
       placeholder="Price"
     />
     <br />
-   
-
-   <button
-      class="button"
-      id="addproduct"
-      :style="inputStyle"
+    <button
+      class="button2"
       @click="addprod"
-    >Add product
+    >
+    Add product
     </button>
 
   </div>
-  </div>
+</div>
 </template>
 
 
@@ -140,80 +137,49 @@ export default {
     }
   }
 </script>
-<style>
+<style scoped lang="scss">
 /* Import Poppins font: */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-.main {
+.add-product {
   background: rgba(255, 255, 255, 0.4);
   position: absolute;
   top: 20%;
   left: 30%;
   width: 40%;
   text-align: center;
-  padding: 5px;
   border-radius: 3rem;
-  box-shadow: 0px 0px 8px -5px #000000;
-  padding-top: 3%;
-  padding-bottom: 5%;
+  box-shadow: 0 0 8px -5px #000000;
+  padding: 3% 5px 5%;
   font-family: "Poppins", sans-serif;
-}
-h1 {
-  cursor: default;
-  user-select: none;
+
+  h1 {
+    cursor: default;
+    user-select: none;
+  }
+  input {
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    margin: 5px;
+    width: 40%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+  input:hover {
+    box-shadow: 0px 0px 8px -5px #000000;
+  }
+  input:active {
+    box-shadow: 0px 0px 8px -5px #000000;
+  }
+  .button2 {
+    cursor: pointer;
+    user-select: none;
+    background: white;
+    border: none;
+  }
 }
 
-
-
-input {
-  border-radius: 3;
-  border: none;
-  padding: 10px;
-  text-align: center;
-  outline: none;
-  margin: 5px;
-  width: 30%;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
-input:hover {
-  box-shadow: 0px 0px 8px -5px #000000;
-}
-input:active {
-  box-shadow: 0px 0px 8px -5px #000000;
-}
-#register {
-  border-radius: 3rem;
-  border: none;
-  padding: 10px;
-  text-align: center;
-  outline: none;
-  margin: 10px;
-  width: 30%;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
-
-button {
-
-  cursor: pointer;
-  user-select: none;
-}
-
-.button2 {
-  cursor: pointer;
-  user-select: none;
-  background: white;
-}
-img {
-  height: 2.2rem;
-  margin: 10px;
-  user-select: none;
-}
-img:hover {
-  box-shadow: 0px 0px 8px -5px #000000;
-  cursor: pointer;
-  border-radius: 200rem;
-}
 </style>

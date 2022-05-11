@@ -8,10 +8,6 @@
 
         <div class="d-flex justify-content-between align-items-center mb-4">
           <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
-          <div>
-            <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!" class="text-body">price <i
-                  class="fas fa-angle-down mt-1"></i></a></p>
-          </div>
         </div>
 
         <cart-card
@@ -23,16 +19,6 @@
           :price="product.price"
           :img-link="product.imgLink"
         />
-
-        <div class="card mb-4">
-          <div class="card-body p-4 d-flex flex-row">
-            <div class="form-outline flex-fill">
-              <input type="text" id="form1" class="form-control form-control-lg" />
-              <label class="form-label" for="form1">Discound code</label>
-            </div>
-            <button type="button" class="btn btn-outline-warning btn-lg ms-3">Apply</button>
-          </div>
-        </div>
 
         <div class="card">
           <div class="card-body">
@@ -48,7 +34,6 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
 import NavBar from "../../../components/navbar/NavBar";
 import CartCard from "../../../components/cards/CartCard";
 
@@ -62,18 +47,11 @@ export default {
       cartProducts: []
     }
   },
-  computed: {
-    ...mapGetters({
-      products: "cartProducts",
-      total: "total",
-    }),
-  },
   async beforeMount() {
     this.cartProducts = await this.getCart();
     console.log(this.cartProducts)
   },
   methods: {
-    ...mapMutations(["addToCart", "removeFromCart"]),
     async getCart() {
       let jwt = localStorage.getItem('jwt');
       const headers = {
@@ -102,16 +80,8 @@ export default {
       })
       await this.reloadCart()
     },
-    checkout() {
-      const string = this.products
-        .map((item) => {
-          return item.dish + " " + item.quantity + " шт.";
-        })
-        .join("\n");
-      alert(string + "\nОбщая стоимость " + this.total + " руб.");
-    },
-  },
-};
+  }
+}
 </script>
 
 <style scoped>

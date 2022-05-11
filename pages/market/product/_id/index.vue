@@ -4,10 +4,11 @@
     <div class="w-75 mx-auto p-5">
       <div class="d-flex flex-row">
         <div class="product-body flex-grow-1">
-          <p class="product-name"><span class="fw-bolder">Name: </span> {{product.name}}</p>
-          <p><span class="fw-bolder">Price: </span> {{product.price}}</p>
-          <p><span class="fw-bolder">Description: </span> {{product.description}}</p>
-          <p><span class="fw-bolder">Seller: </span> {{product.owner.fullName}}</p>
+          <p class="product-name"><span class="font-weight-bold">Name: </span> {{product.name}}</p>
+          <p><span class="font-weight-bold">Price: </span> ${{product.price}}</p>
+          <p><span class="font-weight-bold">Description: </span> {{product.description}}</p>
+          <p><span class="font-weight-bold">Seller: </span> {{product.owner.fullName}}</p>
+          <p><span class="font-weight-bold">Category: </span> {{product.categoryName}}</p>
         </div>
         <div class="product-img w-50">
           <img loading="lazy" :src="product.imgLink" alt="img">
@@ -52,14 +53,14 @@ export default {
         addToCart() {
           let jwt = localStorage.getItem('jwt');
           fetch(`https://sf-rant-backend.herokuapp.com/market/${this.$route.params.id}/add`, {
-            method: 'POST',
-            headers:
-                {
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json',
-                  'Authorization': `Bearer ${jwt}`
-                }
-          })
+              method: 'POST',
+              headers:
+                  {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${jwt}`
+                  }
+          }).then(() => this.$router.push('/market/cart'))
         }
     }
 
